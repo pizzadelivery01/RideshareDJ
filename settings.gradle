@@ -1,0 +1,6 @@
+include ':android gradle-wrapper'
+include ':spotify-app-remote'
+include ':spotify-auth'
+include ':gradle-wrapper'
+include ':app'
+rootProject.name = "RideshareDJ"
