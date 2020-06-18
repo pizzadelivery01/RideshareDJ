@@ -49,7 +49,7 @@ The download package includes comprehensive Javadoc documentation of all API cla
 folder.
 
 #### Models
-Some of the models in the Spotify App Remote SDK are
+Some of the com.ridesharedj.ridesharedj.models in the Spotify App Remote SDK are
 * Album
 * Artist
 * Track

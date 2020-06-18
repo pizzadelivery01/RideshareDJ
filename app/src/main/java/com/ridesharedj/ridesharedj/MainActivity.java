@@ -38,13 +38,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void openSongEditor() {
+        Intent intent = new Intent(this, SongEditor.class);
+        startActivity(intent);
+    }
+
     public void openSpotifyLogin() {
         Intent intent = new Intent(this, Spotify_login.class);
         startActivity(intent);
     }
 
 
-    public void onRequestPermissionsReslut(int requestCode, String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_RECEIVE_SMS:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -54,15 +59,5 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
     }
-
-    @Override
-    public void setContentView(View view) {
-        Intent intent = getIntent();
-        String smsText = intent.getStringExtra("smsText");
-        setContentView(R.layout.activity_main);
-        TextView tv = findViewById(R.id.textView2);
-        tv.setText(smsText);
-        super.setContentView(view);
-
-    }
 }
+

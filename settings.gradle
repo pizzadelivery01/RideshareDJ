@@ -1,3 +1,4 @@
+include ':spotify-web-api-wrapper'
 include ':android gradle-wrapper'
 include ':spotify-app-remote'
 include ':spotify-auth'

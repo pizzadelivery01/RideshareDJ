@@ -12,8 +12,8 @@ public class SmsListenter extends BroadcastReceiver {
     private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
     private static final String TAG = "SmsBroadcastReceiver";
     String msg ="";
-
-
+    String body = "";
+    String content = "";
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.i(TAG, "Intent Received: " + intent.getAction());
@@ -26,15 +26,21 @@ public class SmsListenter extends BroadcastReceiver {
                 for (int i = 0; i < mypdu.length; i++) {
                     String format = dataBundle.getString("format");
                     message[i] = SmsMessage.createFromPdu((byte[]) mypdu[i], format);
-                    msg = message[i].getMessageBody();
+                    body = message[i].getMessageBody();
 
                 }
             }
-            Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
-           // Intent i = new Intent(context, MainActivity.class);
-           // i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-           // i.putExtra("smsText", msg);
-           // context.startActivity(i);
+
+            if (body.startsWith("!sr")) {
+                String msg = body.substring(4);
+                Intent i = new Intent("SMS_INTENT");
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("smsText", msg);
+                context.sendBroadcast(i);
+            }
+            else {
+                Toast.makeText(context, "didn't start with !sr", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

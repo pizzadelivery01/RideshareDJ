@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RideshareDJ.iml" filepath="$PROJECT_DIR$/.idea/modules/RideshareDJ.iml" group="RideshareDJ" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android gradle-wrapper/android_gradle-wrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/android gradle-wrapper/android_gradle-wrapper.iml" group="RideshareDJ/android gradle-wrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="RideshareDJ/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-wrapper/gradle-wrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-wrapper/gradle-wrapper.iml" group="RideshareDJ/gradle-wrapper" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spotify-app-remote/spotify-app-remote.iml" filepath="$PROJECT_DIR$/.idea/modules/spotify-app-remote/spotify-app-remote.iml" group="RideshareDJ/spotify-app-remote" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spotify-auth/spotify-auth.iml" filepath="$PROJECT_DIR$/.idea/modules/spotify-auth/spotify-auth.iml" group="RideshareDJ/spotify-auth" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spotify-web-api-wrapper/spotify-web-api-wrapper.iml" filepath="$PROJECT_DIR$/.idea/modules/spotify-web-api-wrapper/spotify-web-api-wrapper.iml" group="RideshareDJ/spotify-web-api-wrapper" />
+    </modules>
+  </component>
+</project>
